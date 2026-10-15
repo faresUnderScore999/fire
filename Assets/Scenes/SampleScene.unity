@@ -586,6 +586,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &851546197 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7336249411975776731, guid: e9c72f37d3316f246801c93c86345fd5, type: 3}
+  m_PrefabInstance: {fileID: 1284926167}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1147356843
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -719,13 +724,59 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7336249411975776731, guid: e9c72f37d3316f246801c93c86345fd5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1284926169}
+    - targetCorrespondingSourceObject: {fileID: 7336249411975776731, guid: e9c72f37d3316f246801c93c86345fd5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1284926170}
   m_SourcePrefab: {fileID: 100100000, guid: e9c72f37d3316f246801c93c86345fd5, type: 3}
 --- !u!4 &1284926168 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7963568467247649633, guid: e9c72f37d3316f246801c93c86345fd5, type: 3}
   m_PrefabInstance: {fileID: 1284926167}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &1284926169
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 851546197}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: e04864c10326299499d85a89fbc110b0, type: 3}
+  m_Controller: {fileID: 9100000, guid: 16d38d9ea17edc5f7b8e6837d0b75682, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1284926170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 851546197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf89c820b69e2d9748fdabc98205f59c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerAnimationController
+  inputActions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+  actionMapName: Player
+  moveActionName: Move
+  sprintActionName: Sprint
+  animator: {fileID: 1284926169}
+  dampTime: 0.1
 --- !u!1 &1600930578
 GameObject:
   m_ObjectHideFlags: 0
@@ -738,6 +789,7 @@ GameObject:
   - component: {fileID: 1600930582}
   - component: {fileID: 1600930581}
   - component: {fileID: 1600930580}
+  - component: {fileID: 1600930584}
   - component: {fileID: 1600930579}
   m_Layer: 0
   m_Name: FreeLook Camera
@@ -948,6 +1000,36 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1600930584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1600930578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca7de3aefa901374ba29464584a3109a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachineDecollider
+  CameraRadius: 0.4
+  Decollision:
+    Enabled: 0
+    ObstacleLayers:
+      serializedVersion: 2
+      m_Bits: 1
+    UseFollowTarget:
+      Enabled: 0
+      YOffset: 0
+    Damping: 0.5
+    SmoothingTime: 0
+  TerrainResolution:
+    Enabled: 1
+    TerrainLayers:
+      serializedVersion: 2
+      m_Bits: 1
+    MaximumRaycast: 10
+    Damping: 0.5
 --- !u!1 &1822914297
 GameObject:
   m_ObjectHideFlags: 0
