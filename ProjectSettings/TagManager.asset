@@ -3,6 +3,10 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
+  tags:
+  - FireSpawn
+  - Flammable
+  - Fire
   tags: []
   layers:
   - Default
@@ -11,10 +15,10 @@ TagManager:
   - wall
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
+  - Player
+  - NPC
+  - Fire
+  - Water
   - 
   - 
   - 
