@@ -1,6 +1,5 @@
 using UnityEngine;
 using TMPro;
-using System.Diagnostics;
 
 public class ExtinguisherDropZone : MonoBehaviour
 {
@@ -11,6 +10,10 @@ public class ExtinguisherDropZone : MonoBehaviour
     [Header("Target Extinguisher")]
     [Tooltip("Drag your specific extinguisher object here.")]
     public Extinguisher targetExtinguisher;
+
+    [Header("Fire Object")]
+    [Tooltip("Drag the fire GameObject here that you want to destroy when correct.")]
+    public GameObject fireObject;
 
     [Header("UI Reference")]
     [Tooltip("The Canvas Text component passed as a parameter.")]
@@ -28,13 +31,13 @@ public class ExtinguisherDropZone : MonoBehaviour
     {
         if (targetExtinguisher == null)
         {
-           
             return;
         }
 
         // Check the distance between this box and the extinguisher
         float distance = Vector3.Distance(transform.position, targetExtinguisher.transform.position);
-            UnityEngine.Debug.LogWarning($"Distance to extinguisher: {distance} (Detection radius: {detectionRadius})");
+        UnityEngine.Debug.LogWarning($"Distance to extinguisher: {distance} (Detection radius: {detectionRadius})");
+
         if (distance <= detectionRadius)
         {
             // Inside the zone: show the message
@@ -44,6 +47,12 @@ public class ExtinguisherDropZone : MonoBehaviour
                 {
                     feedbackText.text = correctMessage;
                     feedbackText.color = Color.green;
+                }
+
+                // Destroy the fire object if it hasn't been destroyed yet
+                if (fireObject != null)
+                {
+                    Destroy(fireObject);
                 }
             }
             else
