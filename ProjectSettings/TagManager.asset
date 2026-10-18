@@ -7,11 +7,12 @@ TagManager:
   - FireSpawn
   - Flammable
   - Fire
+  tags: []
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - wall
   - Water
   - UI
   - Player
