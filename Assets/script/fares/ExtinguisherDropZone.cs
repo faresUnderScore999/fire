@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using System.Diagnostics;
 
 public class ExtinguisherDropZone : MonoBehaviour
 {
@@ -27,12 +28,13 @@ public class ExtinguisherDropZone : MonoBehaviour
     {
         if (targetExtinguisher == null)
         {
+           
             return;
         }
 
         // Check the distance between this box and the extinguisher
         float distance = Vector3.Distance(transform.position, targetExtinguisher.transform.position);
-
+            UnityEngine.Debug.LogWarning($"Distance to extinguisher: {distance} (Detection radius: {detectionRadius})");
         if (distance <= detectionRadius)
         {
             // Inside the zone: show the message
