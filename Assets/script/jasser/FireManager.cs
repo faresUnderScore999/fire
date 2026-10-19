@@ -26,6 +26,7 @@ public class FireManager : MonoBehaviour
     private float startTime;
     private float nextSpreadCheck;
     private bool finished;
+    public bool IsFinished => finished;
 
     private void Start()
     {
