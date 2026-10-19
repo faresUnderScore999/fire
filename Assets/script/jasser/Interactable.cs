@@ -9,7 +9,7 @@ public class Interactable : MonoBehaviour
     public UnityEvent OnInteracted = new UnityEvent();
 
     public string Prompt => prompt;
-    public bool CanInteract { get; private set; } = true;
+    public bool CanInteract { get; set; } = true;
 
     public void Interact()
     {
