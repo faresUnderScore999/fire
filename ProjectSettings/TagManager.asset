@@ -7,7 +7,7 @@ TagManager:
   - FireSpawn
   - Flammable
   - Fire
-  tags: []
+  - Endpoint
   layers:
   - Default
   - TransparentFX
@@ -19,8 +19,8 @@ TagManager:
   - NPC
   - Fire
   - Water
-  - 
-  - 
+  - road
+  - car
   - 
   - 
   - 

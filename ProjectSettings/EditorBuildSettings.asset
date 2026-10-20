@@ -12,6 +12,12 @@ EditorBuildSettings:
     path: Assets/Scenes/faresScene.unity
     guid: 08b2725ba1d396f2b8f039f8aec98da5
   - enabled: 1
+    path: Assets/Scenes/postScene.unity
+    guid: 3399a4615df58a826beadfdb7302c31a
+  - enabled: 1
+    path: Assets/Scenes/CarScene.unity
+    guid: 8794d80a901cbf451a0690a87ce5434c
+  - enabled: 1
     path: Assets/Scenes/molkaScene.unity
     guid: 977bb86f33902374c945cd1e967dd422
   m_configObjects:
